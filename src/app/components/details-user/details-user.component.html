@@ -1,0 +1,43 @@
+<br>
+<br>
+<br>
+<br>
+<section id="user">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 mx-auto">
+                <div class="card_user">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <table class="table table-md table-hover">
+                                <tbody>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Fecha de Nacimiento</th>
+                                        <th>Tipo de usuario</th>
+                                        <!-- <th>Tercera edad?</th> -->
+                                        <th>Saldo</th>
+                                        <th>Editar</th>
+                                        <th>Eliminar</th>
+                                    </tr>
+                                    <tr>
+                                        <td>{{user.name}}</td>
+                                        <td>{{user.birthdate}}</td>
+                                        <td>{{user.type}}</td>
+                                        <td>{{user.balance}}</td>
+                                        <td><a class="btn btn-warning text-white" (click)="onEdit(user)">
+                                                <i class="far fa-edit"></i>
+                                            </a></td>
+                                        <td><a class="btn btn-danger text-white" (click)="onDelete(user.$key)">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
