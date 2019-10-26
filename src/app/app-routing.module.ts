@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -12,11 +13,11 @@ import { Page404Component } from './components/page404/page404.component';
 const routes: Routes = [
   { path: '', component: HomeComponent}, 
   
-  { path: 'admin/list-users', component: ListUsersComponent}, //TODO: only auth users
+  { path: 'admin/list-users', component: ListUsersComponent, canActivate: [AuthGuard]}, //TODO: only auth users
   { path: 'user/login', component: LoginComponent},
   { path: 'user/register', component: RegisterComponent},
-  { path: 'user/profile', component: ProfileComponent},  //TODO: only auth users
-  { path: 'user/:id', component: DetailsUserComponent },
+  { path: 'user/profile', component: ProfileComponent, canActivate: [AuthGuard]},  //TODO: only auth users
+  { path: 'user/:id', component: DetailsUserComponent, canActivate: [AuthGuard] },
   { path: '**', component: Page404Component}
    
 

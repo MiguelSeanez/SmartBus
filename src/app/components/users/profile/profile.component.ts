@@ -11,15 +11,15 @@ export class ProfileComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  user: UserInterface;
-  // user: UserInterface ={
-  //   name:'',
-  //   email:'',
-  //   gender: '',
-  //   birthdate: '',
-  //   type: '',
-  //   balance: 0,
-  // }
+  //user: UserInterface;
+  user: UserInterface ={
+    name:'',
+    email:'',
+    gender: '',
+    birthdate: '',
+    type: '',
+    balance: 0,
+  }
 
   public providerId: string = 'null';
 

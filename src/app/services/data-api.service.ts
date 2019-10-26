@@ -10,8 +10,7 @@ import { map } from 'rxjs/operators';
 export class DataApiService {
 
   constructor(private afs: AngularFirestore) { 
-    this.usersCollection = afs.collection<UserInterface>('Users');
-    this.users = this.usersCollection.valueChanges();
+    //this.users = this.usersCollection.valueChanges();
   }
 
   private usersCollection: AngularFirestoreCollection<UserInterface>;
@@ -32,6 +31,7 @@ export class DataApiService {
   };
 
   getAllUsers(){
+    this.usersCollection = this.afs.collection<UserInterface>('Users');
     return this.users = this.usersCollection.snapshotChanges()
     .pipe(map( changes => {
       return changes.map(action => {
