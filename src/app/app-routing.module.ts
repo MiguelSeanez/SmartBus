@@ -1,3 +1,4 @@
+import { ClusterComponent } from './components/cluster/cluster.component';
 import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'user/register', component: RegisterComponent},
   { path: 'user/profile', component: ProfileComponent, canActivate: [AuthGuard]},  //TODO: only auth users
   { path: 'user/:id', component: DetailsUserComponent, canActivate: [AuthGuard] },
+  { path: 'cluster', component: ClusterComponent, canActivate: [AuthGuard] },
   { path: '**', component: Page404Component}
    
 

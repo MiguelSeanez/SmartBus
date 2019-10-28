@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { ClusterComponent } from './components/cluster/cluster.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
     LoginComponent,
     ProfileComponent,
     RegisterComponent,
-    Page404Component
+    Page404Component,
+    ClusterComponent
   ],
   imports: [
     BrowserModule,

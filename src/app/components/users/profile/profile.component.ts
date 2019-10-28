@@ -1,3 +1,4 @@
+import { NgForm } from '@angular/forms';
 import { UserInterface } from './../../../models/user';
 import { AuthService } from './../../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
@@ -24,6 +25,8 @@ export class ProfileComponent implements OnInit {
     balance: 0,
   }
 
+  editando: boolean = false;
+
   getUser: Observable<UserInterface>;
 
   public providerId: string = 'null';
@@ -46,5 +49,15 @@ export class ProfileComponent implements OnInit {
       }
     }); 
   }
+
+  onSubmit(userForm: NgForm){
+    this.editando = false;
+    this.dataApi.updateUser(userForm.value);
+  }
+
+  onEdit(actualUser: UserInterface): void{
+    this.editando = true;
+  }
+
 
 }
