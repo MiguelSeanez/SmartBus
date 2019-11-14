@@ -113,7 +113,7 @@ function rangeSlider(elem, config) {
   }
 
   range.appendChild(dragger);
-  elem.appendChild(range);
+  // elem.appendChild(range);
 
   initDragger();
 }

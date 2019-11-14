@@ -1,0 +1,36 @@
+<p>my-tickets works!</p>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+                    <h3 class="text-center">Mis Tickets</h3>
+                    <table class="table table-md table-hover">
+                        <tbody>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Bus ID</th>
+                                <th>Costo</th>
+                                <th>Latitud</th>
+                                <th>Longitud</th>
+                            </tr>
+                            <!-- < *ngFor="let tickets of ticketsArray"> -->
+                            <ng-template ngFor let-tickets [ngForOf]="ticketsArray">
+                                <tr *ngFor="let ticket of tickets">
+                                    <td>{{ticket.date}}</td>
+                                    <td>{{ticket.time}}</td>
+                                    <td>{{ticket.busId}}</td>
+                                    <td>{{ticket.cost}}</td>
+                                    <td>{{ticket.lat}}</td>
+                                    <td>{{ticket.lng}}</td>
+                                </tr>
+                            </ng-template>
+                            <!-- </tr> -->
+
+                        </tbody>
+                    </table>
+
+        </div>

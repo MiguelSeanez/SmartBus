@@ -4,4 +4,5 @@ export interface TicketInterface{
     latitude?: string;
     time?: string;
     busId?: string;
+    cost?: number;
 }

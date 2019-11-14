@@ -9,7 +9,10 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class NavbarComponent implements OnInit {
   public isLogged: boolean = false;
+  public isAdmin: boolean = false;
   constructor(private authService: AuthService, private afsAuth: AngularFireAuth) { }
+
+  adminK = 'GEZMP3lyL2PnnZ3wMlE975xe5jC3';
 
   ngOnInit() {
     this.getCurrentUser();
@@ -18,11 +21,14 @@ export class NavbarComponent implements OnInit {
   getCurrentUser(){
     this.authService.isAuth().subscribe( auth => {
       if(auth){
-        console.log('user logged');
+        //console.log('user logged');
         this.isLogged = true;
+        if(auth.uid == this.adminK){
+          this.isAdmin = true;
+        }
       }
       else{
-        console.log('NOT user logged');
+        //console.log('NOT user logged');
         this.isLogged = false;
       }
     })

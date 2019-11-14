@@ -43,6 +43,9 @@ export class ProfileComponent implements OnInit {
         //this.user.email = user.email;
         //this.providerId = user.providerData[0].providerId;
         //this.user.balance = 10;
+        if(this.user.type == ''){
+          this.user.type = 'Normal';
+        }
         
         
         console.log('user', user);

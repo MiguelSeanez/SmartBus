@@ -1,30 +1,22 @@
-<section id="books">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let book of books">
-          <div class="card_book">
-            <div class="card">
-              <div class="card-body text-center">
-                <p>
-                  <img class="img-fluid" src="{{book.portada}}" alt="{{book.titulo}}">
+<header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-center">
+          <h1 class="">Bienvenidos a SmartBus</h1>
+          <!-- <p class="lead"><a href="./../users/new-user/new-user.component.html"> Regístrate ahora </a></p> -->
+          <section class="py-5">
+              <div class="container">
+                <h2 class="font-weight-light">¿Qué es SmartBus?</h2>
+                <p>SmartBus es una plataforma digital para la venta de tickets de autobús mediante tarjetas eléctronicas y 
+                  dispositivos compatibles con NFC. Se busca crear una mejor atención a los usuarios por parte de los servicios
+                  de transporte público por medio de algoritmos de agrupación para conocer mejor a los usuarios y brindar un 
+                  servicio más personalizado para todos.
                 </p>
-                <h4 routerLink="/book/{{book.id}}" class="card-title">{{book.titulo}}</h4>
-                <p class="card-text">
-                  {{book.descripcion }}
-                </p>
-                <div class="container-precio-idioma">
-                  <p class="badge badge-info">
-                    {{book.precio}}€
-                  </p>
-                  <p class="badge badge-info">
-                    {{book.idioma}}
-                  </p>
-                </div>
-                <a href="{{book.link_amazon}}" class="btn btn-block btn-primary" target="_blank">Buy</a>
               </div>
-            </div>
-          </div>
+            </section>
         </div>
       </div>
     </div>
-  </section>
+  </header>
+  
+  <!-- Page Content -->

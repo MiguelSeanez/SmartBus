@@ -21,6 +21,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { ClusterComponent } from './components/cluster/cluster.component';
+import { MyTicketsComponent } from './components/my-tickets/my-tickets.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ClusterComponent } from './components/cluster/cluster.component';
     ProfileComponent,
     RegisterComponent,
     Page404Component,
-    ClusterComponent
+    ClusterComponent,
+    MyTicketsComponent
   ],
   imports: [
     BrowserModule,

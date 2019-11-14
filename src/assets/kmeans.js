@@ -37,7 +37,7 @@ $(function() {
   var randomness = 25;
   var $step = $('.step');
 
-  rangeSlider($rangeSlider[0], {
+  rangeSlider(0, {
     value: randomness,
     drag: function(value) {
       // Update the randomness after the user drags the slider
@@ -87,6 +87,10 @@ $(function() {
   });
 
   $('.new-points').click(function() {
+    resetPoints();
+  });
+
+  $('.initialize').click(function() {
     resetPoints();
   });
 

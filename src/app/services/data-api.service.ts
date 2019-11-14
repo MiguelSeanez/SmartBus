@@ -1,8 +1,9 @@
 import { Observable } from 'rxjs';
 import { UserInterface, Roles } from './../models/user';
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { map } from 'rxjs/operators';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, AngularFirestoreCollectionGroup } from '@angular/fire/firestore';
+import { map, reduce } from 'rxjs/operators';
+import { TicketInterface } from '../models/ticket';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,7 @@ export class DataApiService {
   private users: Observable<UserInterface[]>;
   private userDoc : AngularFirestoreDocument<UserInterface>;
   private user: Observable<UserInterface>;
+  private ticketUser: AngularFirestoreCollectionGroup;
   public selectedUser: UserInterface = {
     id: null,
     name: '',
@@ -40,6 +42,10 @@ export class DataApiService {
         return data;
       });
     }));
+  }
+
+  getTicketUser(user: UserInterface){
+    
   }
 
   addUser(user: UserInterface){
