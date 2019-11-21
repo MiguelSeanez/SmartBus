@@ -1,3 +1,4 @@
+import { LoginComponent } from './../users/login/login.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

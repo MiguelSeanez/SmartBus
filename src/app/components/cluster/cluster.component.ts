@@ -20,6 +20,7 @@ export class ClusterComponent implements OnInit {
     // kmeans(points, 2)
     this.start();
     
+    
   }  
 
   start(){

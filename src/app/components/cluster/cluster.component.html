@@ -1,52 +1,50 @@
+<script>
+    $(document).ready(function(){
+        $('.zoom').hover(function() {
+            $(this).addClass('transition');
+        }, function() {
+            $(this).removeClass('transition');
+        });
+    });
+    </script>
 <br>
 <br>
 <br>
 <br>
-<!-- <div class='container'>
-        <div class='row'>
-          <div class='col-xs-12'>
-              <h1 class="text-center">Cluster K-Means</h1>
-              <hr>
-            <div id='kmeans-vis'></div>
-          </div> -->
-         <!-- <div class='col-xs-5'>
-             <div class='row'>
-              
-              <div class='step-title update'>
-                Update centroid
-              </div>
-              <div class='step-description update'>
-                Update each centroid to be the mean of the points in its group.
-              </div>
-              <a class='step btn btn-primary find'>Find closest centroid</a>
-              <hr>
-            </div>
-            <div class='row'>
-              <h3 class='data-header'>Data</h3>
-              Clustered points <div class='range-slider' id='range-slider'></div> Random
-              <button class="btn btn-primary initialize" id="initialize" > INICIAR </button>
-              <br/>
-              <div class='input'>Number of clusters</div>: <input id='num-clusters' type='text' value='3'>
-              <br/>
-              <div class='input'>Number of centroids</div>: <input id='num-centroids' type='text' value='3'>
-              <br/>
-              <br />
-              <a class='new-points btn btn-danger'>New points</a>
-              <a class='new-centroids btn btn-danger'>New centroids</a>
-            </div> 
-          </div>-->
-        <!-- </div> -->
-        <!-- <script src='d3.min.js'></script>
-        <script src='range-slider.js'></script>
-        <script src='kmeans.js'></script> -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form action="" #Ruta1="ngForm" (ngSubmit)='onSubmit(Ruta1)'>
 
+      </form>
+    </div>
+  </div>
+</div>
 
-        <div style="display: flex;">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <img src="../../../assets/plot.png" width="600" alt="">
-              </div>
-            </div>
-          </div>
+<div style="display: flex;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center"> Resultado del cluster de la ruta 622 </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="text-center">Cluster respecto a las paradas </h4>
+      </div>
+      <div class="col-md-12 text-center">
+        <img src="../../../assets/plot.png" width="600" alt="" >
+      </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12"> <h4 class="text-center"> Cluster respecto a los dias de la semana y hora</h4></div>
+        <div class="col-md-12 text-center">
+          <img src="../../../assets/plot2.png" width="600" alt="" >
         </div>
+      </div>
+
+  </div>
+
+</div>
